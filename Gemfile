@@ -15,16 +15,19 @@ gem "puma", ">= 4.3.5"
 gem "uglifier", "~> 4.1"
 
 gem "faker", "~> 1.9"
-gem "figaro", "~> 1.2"
 
 gem "wicked_pdf", "~> 1.4"
 gem "whenever", require: false
-gem "delayed_job_web"
-gem "delayed_job_active_record"
 gem "rspec"
 gem "sentry-ruby"
 gem "sentry-rails"
 gem "daemons"
+gem "delayed_job_web"
+gem "delayed_job_active_record"
+
+group "production" do
+  gem "figaro", "~> 1.2"
+end
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
