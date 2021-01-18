@@ -19,6 +19,12 @@ gem "figaro", "~> 1.2"
 
 gem "wicked_pdf", "~> 1.4"
 gem "whenever", require: false
+gem "delayed_job_web"
+gem "delayed_job_active_record"
+gem "rspec"
+gem "sentry-ruby"
+gem "sentry-rails"
+gem "daemons"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
@@ -40,11 +46,6 @@ group :development do
   gem "capistrano-passenger", "~> 0.2.0", require: false
   gem "capistrano-rails", "~> 1.6", require: false
   gem 'capistrano-figaro-yml', '~> 1.0.2', require: false
-end
-
-
-group :development do
+  gem 'capistrano-delayed-job', '~> 1.0'
   gem "passenger", "~> 6.0"
-  gem "delayed_job_active_record", "~> 4.1"
-  gem "daemons", "~> 1.3"
 end
