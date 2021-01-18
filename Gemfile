@@ -22,12 +22,11 @@ gem "whenever", require: false
 gem "rspec"
 gem "sentry-ruby"
 gem "sentry-rails"
-gem "daemons"
-gem "delayed_job_web"
-gem "delayed_job_active_record"
 
 group "production" do
   gem "figaro", "~> 1.2"
+  gem "daemons"
+  gem "delayed_job_active_record"
 end
 
 group :development, :test do
