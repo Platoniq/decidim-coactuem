@@ -271,6 +271,10 @@ GEM
       decidim-core (= 0.23.1)
       kaminari (~> 1.2, >= 1.2.1)
       searchlight (~> 4.1)
+    decidim-decidim_awesome (0.6.1)
+      decidim-admin (>= 0.22.0, < 0.24)
+      decidim-core (>= 0.22.0, < 0.24)
+      redcarpet (~> 3.4)
     decidim-dev (0.23.1)
       byebug (~> 11.0)
       capybara (~> 3.24)
@@ -839,6 +843,7 @@ DEPENDENCIES
   capistrano-rbenv (~> 2.2)
   daemons
   decidim (= 0.23.1)
+  decidim-decidim_awesome (= 0.6.1)
   decidim-dev (= 0.23.1)
   delayed_job_active_record
   delayed_job_web
