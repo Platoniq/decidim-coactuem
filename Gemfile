@@ -49,6 +49,5 @@ group :development do
   gem "capistrano-passenger", "~> 0.2.0", require: false
   gem "capistrano-rails", "~> 1.6", require: false
   gem 'capistrano-figaro-yml', '~> 1.0.2', require: false
-  gem 'capistrano-delayed-job', '~> 1.0'
   gem "passenger", "~> 6.0"
 end
