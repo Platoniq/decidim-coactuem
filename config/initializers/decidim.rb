@@ -54,24 +54,24 @@ Decidim.configure do |config|
   # When used, please read carefully the terms of service for your service
   # provider.
   #
-  # config.maps = {
-  #   provider: :osm,
-  #   api_key: Rails.application.secrets.maps[:api_key],
-  #   dynamic: {
-  #     tile_layer: {
-  #       url: "https://tiles.example.org/{z}/{x}/{y}.png?key={apiKey}&{foo}",
-  #       api_key: true,
-  #       foo: "bar=baz",
-  #       attribution: %(
-  #         <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap</a> contributors
-  #       ).strip
-  #       # Translatable attribution:
-  #       # attribution: -> { I18n.t("tile_layer_attribution") }
-  #     }
-  #   },
-  #   static: { url: "https://staticmap.example.org/" },
-  #   geocoding: { host: "nominatim.example.org", use_https: true }
-  # }
+  config.maps = {
+    provider: :osm,
+    api_key: Rails.application.secrets.maps[:api_key],
+    dynamic: {
+      tile_layer: {
+        url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png?key={apiKey}&{foo}",
+        api_key: true,
+        foo: "bar=baz",
+        attribution: %(
+          <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap</a> contributors
+        ).strip
+        # Translatable attribution:
+        # attribution: -> { I18n.t("tile_layer_attribution") }
+      }
+    },
+    # static: { url: "https://staticmap.openstreetmap.de/staticmap.php" },
+    geocoding: { host: "nominatim.openstreetmap.org", use_https: true }
+  }
   #
   # == Combination (OpenStreetMap default + HERE Maps dynamic map tiles) ==
   # config.maps = {
@@ -228,11 +228,11 @@ Decidim.configure do |config|
   # Only needed if you want to have Etherpad integration with Decidim. See
   # Decidim docs at docs/services/etherpad.md in order to set it up.
   #
-  # config.etherpad = {
-  #   server: Rails.application.secrets.etherpad[:server],
-  #   api_key: Rails.application.secrets.etherpad[:api_key],
-  #   api_version: Rails.application.secrets.etherpad[:api_version]
-  # }
+  config.etherpad = {
+    server: Rails.application.secrets.etherpad[:server],
+    api_key: Rails.application.secrets.etherpad[:api_key],
+    api_version: Rails.application.secrets.etherpad[:api_version]
+  }
 
   # Sets Decidim::Exporters::CSV's default column separator
   # config.default_csv_col_sep = ";"
