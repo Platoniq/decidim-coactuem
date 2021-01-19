@@ -19,16 +19,16 @@ gem "uglifier", "~> 4.1"
 
 gem "faker", "~> 1.9"
 
-gem "wicked_pdf", "~> 1.4"
-gem "whenever", require: false
 gem "rspec"
-gem "sentry-ruby"
 gem "sentry-rails"
+gem "sentry-ruby"
+gem "whenever", require: false
+gem "wicked_pdf", "~> 1.4"
 
 group "production" do
-  gem "figaro", "~> 1.2"
   gem "daemons"
   gem "delayed_job_active_record"
+  gem "figaro", "~> 1.2"
 end
 
 group :development, :test do
@@ -43,13 +43,13 @@ group :development do
   gem "spring", "~> 2.0"
   gem "spring-watcher-listen", "~> 2.0"
   gem "web-console", "~> 3.5"
-  
+
   gem "capistrano", "~> 3.15"
-  gem 'capistrano-rails-console', require: false
-  gem "capistrano-rbenv", "~> 2.2", require: false
   gem "capistrano-bundler", "~> 2.0", require: false
+  gem "capistrano-figaro-yml", "~> 1.0.2", require: false
   gem "capistrano-passenger", "~> 0.2.0", require: false
   gem "capistrano-rails", "~> 1.6", require: false
-  gem 'capistrano-figaro-yml', '~> 1.0.2', require: false
+  gem "capistrano-rails-console", require: false
+  gem "capistrano-rbenv", "~> 2.2", require: false
   gem "passenger", "~> 6.0"
 end
