@@ -1,6 +1,15 @@
 GIT
+  remote: https://github.com/Platoniq/decidim-module-term_customizer
+  revision: 161bcbb4364cd265af8eeceed3f393f196136564
+  branch: temp/0.23
+  specs:
+    decidim-term_customizer (0.23.0)
+      decidim-admin (~> 0.23.0)
+      decidim-core (~> 0.23.0)
+
+GIT
   remote: https://github.com/decidim/decidim
-  revision: f16a0f6cc1599fedfefc339f1fd8be2111089252
+  revision: 5b53cf04276fb6f2f64f8151818047edf45a2ba8
   branch: release/0.23-stable
   specs:
     decidim (0.23.1)
@@ -710,7 +719,7 @@ GEM
       rubocop (>= 0.68.1)
     ruby-ole (1.2.12.2)
     ruby-progressbar (1.11.0)
-    ruby2_keywords (0.0.2)
+    ruby2_keywords (0.0.4)
     rubyzip (2.3.0)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -837,6 +846,7 @@ DEPENDENCIES
   decidim!
   decidim-decidim_awesome (= 0.6.1)
   decidim-dev!
+  decidim-term_customizer!
   delayed_job_active_record
   faker (~> 1.9)
   figaro (~> 1.2)
