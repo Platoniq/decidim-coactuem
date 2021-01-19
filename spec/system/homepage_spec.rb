@@ -14,7 +14,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
   it "renders the home page" do
     expect(page).to have_content("Home")
   end
-  
+
   it "has matomo tracker" do
     expect(page.execute_script("return typeof window._paq")).not_to eq("undefined")
     expect(page.execute_script("return typeof window._paq")).to eq("object")
