@@ -11,6 +11,10 @@ $border: none;
   .about-link {
     font-size: 80%;
   }
+
+  a:hover {
+    color: $light-gray;
+  }
 }
 
 .process-nav__content li {
