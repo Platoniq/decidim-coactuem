@@ -1,0 +1,73 @@
+$main-deep: #1f2041;
+$alt-blue: #00718d;
+$main-blue: #1c7376;
+$success: #008d62;
+$alt-green: #2a8d00;
+$main-green: #718d00;
+$warning-1: #73761c;
+$warning: #8d6300;
+$alert: #8d002b;
+
+$complementary: #761f1c;
+$complementary-2: #1c008d;
+
+// Variables
+
+$primary: $main-blue;
+$primary-rgb: 28, 115, 118;
+$secondary: $main-green;
+$secondary-rgb: #718d00;
+// $success: #008d62;
+$success-rgb: 0, 141, 98;
+// $warning: #8d6300;
+$warning-rgb: 141, 99, 0;
+// $alert: #8d002b;
+$alert-rgb: 141, 0, 43;
+$highlight: $alt-blue;
+$highlight-rgb: 0, 113, 141;
+$highlight-alternative: $alt-green;
+$highlight-alternative-rgb: 42, 141, 0;
+
+$proposals: #238ff7;
+$actions: #57d685;
+$debates: #fa6c96;
+$meetings: #fabc6c;
+
+$twitter: #55acee;
+$facebook: #3b5998;
+$google: #4285f4;
+
+// background colors used in public diff views
+$color-addition: #e6ffed;
+$color-removal: #ffeef0;
+
+:root {
+  --primary: #{$primary};
+  --primary-rgb: #{$primary-rgb};
+  --secondary: #{$secondary};
+  --secondary-rgb: #{$secondary-rgb};
+  --success: #{$success};
+  --success-rgb: #{$success-rgb};
+  --warning: #{$warning};
+  --warning-rgb: #{$warning-rgb};
+  --alert: #{$alert};
+  --alert-rgb: #{$alert-rgb};
+  --proposals: #{$proposals};
+  --actions: #{$actions};
+  --debates: #{$debates};
+  --meetings: #{$meetings};
+  --twitter: #{$twitter};
+  --facebook: #{$facebook};
+  --google: #{$google};
+}
+
+$light-gray: #fff;
+$medium-gray: #f8f8f8;
+$dark-gray: #1f2041;
+$dark-medium-gray: lighten($dark-gray, 10%);
+$black: black;
+$white: #fff;
+$light-gray-dark: darken($light-gray, 2.5) !default;
+$body-background: $white;
+$body-font-color: black;
+$muted: lighten($body-font-color, 20) !default;
