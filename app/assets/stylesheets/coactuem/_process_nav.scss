@@ -1,0 +1,54 @@
+@import "./variables";
+
+$nav-border-width: 3px;
+$border: none;
+
+.process-nav {
+  background-color: $secondary;
+  // box-shadow: inset 0 (-1 * $nav-border-width) 0 0 $medium-gray;
+  box-shadow: none;
+
+  .about-link {
+    font-size: 80%;
+  }
+}
+
+.process-nav__content li {
+  &.is-active {
+    box-shadow: inset 0 (-1 * ($nav-border-width + 1px)) 0 0 $white;
+  }
+}
+
+.process-nav__more {
+  color: $white;
+  background-color: rgba(var(--primary-rgb), 0.1);
+
+  i {
+    background-color: $white;
+  }
+}
+
+.process-nav__hidden-content {
+  background-color: $secondary;
+  box-shadow: 0 0 4px 0 rgba($black, 0.08);
+}
+
+.process-nav__hidden-content__more {
+  @extend .process-nav__more;
+
+  background-color: transparent;
+  border-bottom: $border;
+}
+
+.process-nav__link {
+  text-transform: none;
+  color: $white;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  svg {
+    fill: $white;
+  }
+}

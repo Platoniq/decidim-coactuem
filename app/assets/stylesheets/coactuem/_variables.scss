@@ -1,12 +1,15 @@
+$white: white;
+$black: black;
 $main-deep: #1f2041;
 $alt-blue: #00718d;
 $main-blue: #1c7376;
-$success: #008d62;
+// $success: #00c78b;
+$success: #2a8d00;
 $alt-green: #2a8d00;
 $main-green: #718d00;
 $warning-1: #73761c;
-$warning: #8d6300;
-$alert: #8d002b;
+$warning: #efa00b;
+$alert: #d65108;
 
 $complementary: #761f1c;
 $complementary-2: #1c008d;
@@ -18,11 +21,11 @@ $primary-rgb: 28, 115, 118;
 $secondary: $main-green;
 $secondary-rgb: #718d00;
 // $success: #008d62;
-$success-rgb: 0, 141, 98;
+$success-rgb: 0, 141, 98; // change
 // $warning: #8d6300;
-$warning-rgb: 141, 99, 0;
+$warning-rgb: 141, 99, 0; // change
 // $alert: #8d002b;
-$alert-rgb: 141, 0, 43;
+$alert-rgb: 141, 0, 43; // change
 $highlight: $alt-blue;
 $highlight-rgb: 0, 113, 141;
 $highlight-alternative: $alt-green;
@@ -60,14 +63,3 @@ $color-removal: #ffeef0;
   --facebook: #{$facebook};
   --google: #{$google};
 }
-
-$light-gray: #fff;
-$medium-gray: #f8f8f8;
-$dark-gray: #1f2041;
-$dark-medium-gray: lighten($dark-gray, 10%);
-$black: black;
-$white: #fff;
-$light-gray-dark: darken($light-gray, 2.5) !default;
-$body-background: $white;
-$body-font-color: black;
-$muted: lighten($body-font-color, 20) !default;
