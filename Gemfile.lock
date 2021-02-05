@@ -1,16 +1,7 @@
 GIT
-  remote: https://github.com/Platoniq/decidim-module-term_customizer
-  revision: 161bcbb4364cd265af8eeceed3f393f196136564
-  branch: temp/0.23
-  specs:
-    decidim-term_customizer (0.23.0)
-      decidim-admin (~> 0.23.0)
-      decidim-core (~> 0.23.0)
-
-GIT
-  remote: https://github.com/decidim/decidim
-  revision: c9a5de0d6d85ef36de4adb623d7033894d1655da
-  branch: release/0.23-stable
+  remote: https://github.com/Platoniq/decidim
+  revision: 5fb7cbbda57320f3776ea8c6b3f73507f6d49081
+  branch: temp/0.23-stable
   specs:
     decidim (0.23.1)
       decidim-accountability (= 0.23.1)
@@ -216,6 +207,15 @@ GIT
       decidim-forms (= 0.23.1)
     decidim-verifications (0.23.1)
       decidim-core (= 0.23.1)
+
+GIT
+  remote: https://github.com/Platoniq/decidim-module-term_customizer
+  revision: 161bcbb4364cd265af8eeceed3f393f196136564
+  branch: temp/0.23
+  specs:
+    decidim-term_customizer (0.23.0)
+      decidim-admin (~> 0.23.0)
+      decidim-core (~> 0.23.0)
 
 GEM
   remote: https://rubygems.org/
