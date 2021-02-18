@@ -1,36 +1,53 @@
 $white: white;
-$light-gray: #f0f0f0;
+$gray-light: #f0f0f0;
+$gray-dark: #9a9a9a;
 $black: black;
+
 $main-deep: #1f2041;
-$alt-blue: #00718d;
 $main-blue: #1c7376;
-// $success: #00c78b;
-$success: #2a8d00;
-$alt-green: #2a8d00;
-$main-green: #718d00;
-$warning-1: #73761c;
-$warning: #efa00b;
-$alert: #d65108;
+$main-alt: #00c78b;
+$red: #d65108;
 
 $complementary: #761f1c;
 $complementary-2: #1c008d;
 
 // Variables
 
-$primary: $main-blue;
+$primary: #1c7376;
 $primary-rgb: 28, 115, 118;
-$secondary: $main-green;
-$secondary-rgb: #718d00;
-// $success: #008d62;
-$success-rgb: 0, 141, 98; // change
-// $warning: #8d6300;
-$warning-rgb: 141, 99, 0; // change
-// $alert: #8d002b;
-$alert-rgb: 141, 0, 43; // change
-$highlight: $alt-blue;
-$highlight-rgb: 0, 113, 141;
-$highlight-alternative: $alt-green;
-$highlight-alternative-rgb: 42, 141, 0;
+$secondary: #00c78b;
+$secondary-rgb: 0, 199, 139;
+$success: #718d00;
+$success-rgb: 113, 141, 0;
+$warning: #efa00b;
+$warning-rgb: 239, 160, 11;
+$alert: #d65108;
+$alert-rgb: 214, 81, 8;
+$highlight: #00c78b;
+$highlight-rgb: 0, 199, 139;
+$highlight-alternative: #1c008d;
+$highlight-alternative-rgb: 28, 0, 141;
+
+$link-color: $secondary;
+$link-color-disabled: desaturate($secondary, 50%);
+$link-color-hover: lighten($secondary, 10%);
+
+$border-color: $primary;
+$border-width: 4px;
+$border: $border-width solid $border-color;
+
+$body-font-color: $black;
+$body-background-color: $white;
+$navbar-color: $primary;
+$title-bar-color: $body-font-color;
+
+$title-bar-bg: $body-background-color;
+$navbar-bg: $body-background-color;
+$navbar-fg: $body-font-color;
+$navbar-fg-hover: $body-font-color;
+
+$button-shadow: 0 0 25px 2px transparentize($black, 0.8);
+$card-shadow: 0 0 25px 2px transparentize($black, 0.8);
 
 $proposals: #238ff7;
 $actions: #57d685;
@@ -56,11 +73,31 @@ $color-removal: #ffeef0;
   --warning-rgb: #{$warning-rgb};
   --alert: #{$alert};
   --alert-rgb: #{$alert-rgb};
-  --proposals: #{$proposals};
-  --actions: #{$actions};
-  --debates: #{$debates};
-  --meetings: #{$meetings};
   --twitter: #{$twitter};
   --facebook: #{$facebook};
   --google: #{$google};
 }
+
+.callout.primary {
+  background-color: lighten($primary, 15%);
+}
+
+.callout.secondary {
+  background-color: lighten($secondary, 15%);
+}
+
+.callout.success {
+  background-color: lighten($success, 15%);
+}
+
+.callout.warning {
+  background-color: lighten($warning, 15%);
+}
+
+.callout.alert {
+  background-color: lighten($alert, 15%);
+}
+
+$unit: 16px;
+
+@import "./fonts";
