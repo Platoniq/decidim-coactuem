@@ -1,7 +1,7 @@
 $white: white;
 $gray-light: #f0f0f0;
 $gray-dark: #9a9a9a;
-$black: black;
+$black: #3f3f3f;
 
 $main-deep: #1f2041;
 $main-blue: #1c7376;
@@ -76,23 +76,23 @@ $color-removal: #ffeef0;
 }
 
 .callout.primary {
-  background-color: lighten($primary, 15%);
+  background-color: lighten($primary, 25%);
 }
 
 .callout.secondary {
-  background-color: lighten($secondary, 15%);
+  background-color: lighten($secondary, 25%);
 }
 
 .callout.success {
-  background-color: lighten($success, 15%);
+  background-color: lighten($success, 25%);
 }
 
 .callout.warning {
-  background-color: lighten($warning, 15%);
+  background-color: lighten($warning, 25%);
 }
 
 .callout.alert {
-  background-color: lighten($alert, 15%);
+  background-color: lighten($alert, 25%);
 }
 
 $unit: 16px;
