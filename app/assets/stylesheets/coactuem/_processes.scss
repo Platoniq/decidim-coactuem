@@ -1,25 +1,26 @@
 @import "./variables";
 
-$nav-border-width: 3px;
-$border: none;
-
 .process-nav {
-  background-color: $secondary;
-  // box-shadow: inset 0 (-1 * $nav-border-width) 0 0 $medium-gray;
+  background-color: $primary;
   box-shadow: none;
+  padding: $border-width * 2;
 
-  .about-link {
-    font-size: 80%;
+  a {
+    border-radius: $border-width;
+    padding: $border-width * 2;
   }
 
   a:hover {
-    color: $light-gray;
+    background-color: $success;
   }
 }
 
 .process-nav__content li {
   &.is-active {
-    box-shadow: inset 0 (-1 * ($nav-border-width + 1px)) 0 0 $white;
+    a {
+      background-color: $success;
+    }
+    color: $white;
   }
 }
 
@@ -33,15 +34,13 @@ $border: none;
 }
 
 .process-nav__hidden-content {
-  background-color: $secondary;
-  box-shadow: 0 0 4px 0 rgba($black, 0.08);
+  background-color: $primary;
 }
 
 .process-nav__hidden-content__more {
   @extend .process-nav__more;
 
-  background-color: transparent;
-  border-bottom: $border;
+  background-color: $success;
 }
 
 .process-nav__link {

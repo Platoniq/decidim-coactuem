@@ -17,7 +17,7 @@ $primary: #1c7376;
 $primary-rgb: 28, 115, 118;
 $secondary: #00c78b;
 $secondary-rgb: 0, 199, 139;
-$success: #718d00;
+$success: #b1ce58;
 $success-rgb: 113, 141, 0;
 $warning: #efa00b;
 $warning-rgb: 239, 160, 11;
@@ -28,9 +28,9 @@ $highlight-rgb: 0, 199, 139;
 $highlight-alternative: #1c008d;
 $highlight-alternative-rgb: 28, 0, 141;
 
-$link-color: $secondary;
-$link-color-disabled: desaturate($secondary, 50%);
-$link-color-hover: lighten($secondary, 10%);
+$link-color: $primary;
+$link-color-disabled: desaturate($primary, 50%);
+$link-color-hover: $secondary;
 
 $border-color: $primary;
 $border-width: 4px;
@@ -38,16 +38,13 @@ $border: $border-width solid $border-color;
 
 $body-font-color: $black;
 $body-background-color: $white;
-$navbar-color: $primary;
 $title-bar-color: $body-font-color;
-
 $title-bar-bg: $body-background-color;
-$navbar-bg: $body-background-color;
-$navbar-fg: $body-font-color;
-$navbar-fg-hover: $body-font-color;
+$navbar-color: $white;
+$navbar-bg: $success;
 
-$button-shadow: 0 0 25px 2px transparentize($black, 0.8);
-$card-shadow: 0 0 25px 2px transparentize($black, 0.8);
+$button-shadow: $border-width $border-width 0px 0px;
+$card-shadow: $border-width $border-width 0px 0px transparentize($black, 0.9);
 
 $proposals: #238ff7;
 $actions: #57d685;
