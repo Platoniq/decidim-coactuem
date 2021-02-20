@@ -17,12 +17,13 @@
       a {
         font-size: 1.2em;
         padding: 0.2em;
-        border-radius: $border-width * 2 $border-width * 2 0 0;
-        background-color: lighten($navbar-bg, 30%);
+        border-radius: $border-width $border-width 0 0;
+        border: 1px solid $gray-light;
         color: $body-font-color;
       }
       &--active a {
         box-shadow: none;
+        border-color: $navbar-bg;
         background-color: $navbar-bg;
         color: $navbar-color;
       }

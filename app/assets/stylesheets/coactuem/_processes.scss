@@ -1,57 +1,51 @@
 @import "./variables";
 
 .process-nav {
-  background-color: $primary;
+  background-color: $process-nav-bg;
   box-shadow: none;
-  padding: $border-width * 2;
+  padding-top: $border-width * 2;
 
   a {
+    color: $process-nav-color;
+    padding: 0 0.5em;
     border-radius: $border-width;
-    padding: $border-width * 2;
   }
 
-  a:hover {
-    background-color: $success;
-  }
-}
-
-.process-nav__content li {
-  &.is-active {
-    a {
-      background-color: $success;
+  &__content li {
+    &.is-active a {
+      background-color: $process-nav-alt;
+      box-shadow: $button-shadow $process-nav-color;
     }
-    color: $white;
+  }
+
+  &__link {
+    text-transform: none;
+    color: $process-nav-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    svg {
+      fill: $white;
+    }
   }
 }
 
 .process-nav__more {
   color: $white;
-  background-color: rgba(var(--primary-rgb), 0.1);
+  background-color: transparentize($process-nav-bg, 0.1);
 
   i {
-    background-color: $white;
+    background-color: $process-nav-color;
   }
-}
-
-.process-nav__hidden-content {
-  background-color: $primary;
 }
 
 .process-nav__hidden-content__more {
   @extend .process-nav__more;
-
-  background-color: $success;
+  background-color: $process-nav-alt;
 }
 
-.process-nav__link {
-  text-transform: none;
-  color: $white;
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  svg {
-    fill: $white;
-  }
+.process-nav__hidden-content {
+  background-color: $process-nav-bg;
 }
