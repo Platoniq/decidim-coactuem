@@ -1,5 +1,12 @@
 @import "./variables";
 
+@mixin navbar-highlight {
+  border-color: $navbar-bg;
+  background-color: $navbar-bg;
+  color: $navbar-color;
+  transition: all ease-in-out 250ms;
+}
+
 .title-bar {
   background-color: $title-bar-bg;
 }
@@ -14,8 +21,6 @@
       gap: 1em;
     }
     &__link {
-      transition: all ease-in 300ms;
-
       a {
         font-size: 1.35em;
         padding: 0.2em;
@@ -24,16 +29,19 @@
         border: 1px solid $gray-light;
         border-bottom: none;
         background-color: $body-background-color;
+        text-decoration: none;
 
-        &::hover {
-          background-color: lighten($navbar-bg, 10%);
+        &:hover {
+          @include navbar-highlight;
+          background-color: $primary;
+          border-color: $primary;
         }
       }
+
       &--active a {
         box-shadow: none;
-        border-color: $navbar-bg;
-        background-color: $navbar-bg;
-        color: $navbar-color;
+        font-weight: 900;
+        @include navbar-highlight;
       }
     }
   }
