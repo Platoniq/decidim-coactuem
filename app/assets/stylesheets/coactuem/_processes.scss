@@ -1,8 +1,15 @@
 @import "./variables";
 
+@mixin process-nav-highlight {
+  background-color: $process-nav-alt;
+  box-shadow: $button-shadow $process-nav-color;
+  color: $process-nav-color;
+  transition: all ease-in-out 300ms;
+}
+
 .process-nav {
   background-color: $process-nav-bg;
-  box-shadow: none;
+  box-shadow: $button-shadow transparent;
   padding-top: $border-width * 2;
 
   a {
@@ -13,8 +20,7 @@
 
   &__content li {
     &.is-active a {
-      background-color: $process-nav-alt;
-      box-shadow: $button-shadow $process-nav-color;
+      @include process-nav-highlight;
     }
   }
 
@@ -23,7 +29,8 @@
     color: $process-nav-color;
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
+      @include process-nav-highlight;
     }
 
     svg {

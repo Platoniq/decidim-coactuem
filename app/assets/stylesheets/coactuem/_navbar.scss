@@ -14,12 +14,20 @@
       gap: 1em;
     }
     &__link {
+      transition: all ease-in 300ms;
+
       a {
-        font-size: 1.2em;
+        font-size: 1.35em;
         padding: 0.2em;
-        border-radius: $border-width $border-width 0 0;
-        border: 1px solid $gray-light;
         color: $body-font-color;
+        border-radius: $border-width * 2 $border-width * 2 0 0;
+        border: 1px solid $gray-light;
+        border-bottom: none;
+        background-color: $body-background-color;
+
+        &::hover {
+          background-color: lighten($navbar-bg, 10%);
+        }
       }
       &--active a {
         box-shadow: none;
