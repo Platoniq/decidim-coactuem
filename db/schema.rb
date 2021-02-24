@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_05_121921) do
-
+ActiveRecord::Schema.define(version: 2021_02_23_131413) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -720,6 +719,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_121921) do
     t.datetime "published_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "salt"
     t.index ["questionnaire_for_type", "questionnaire_for_id"], name: "index_decidim_forms_questionnaires_questionnaire_for"
   end
 
@@ -733,6 +733,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_121921) do
     t.integer "max_choices"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "max_characters", default: 0
     t.index ["decidim_questionnaire_id"], name: "index_decidim_forms_questions_on_decidim_questionnaire_id"
     t.index ["position"], name: "index_decidim_forms_questions_on_position"
   end
@@ -848,6 +849,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_121921) do
     t.string "registration_type", default: "registration_disabled", null: false
     t.string "registration_url"
     t.boolean "embedded_videoconference", default: false
+    t.string "salt"
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_meetings_meetings_on_author"
     t.index ["decidim_author_id"], name: "index_decidim_meetings_meetings_on_decidim_author_id"
     t.index ["decidim_component_id"], name: "index_decidim_meetings_meetings_on_decidim_component_id"
