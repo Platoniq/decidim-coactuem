@@ -12,6 +12,13 @@ checksums = [
       # layouts
       "/app/views/layouts/decidim/_head_extra.html.erb" => "1b8237357754cf519f4e418135f78440"
     }
+  },
+  {
+    package: "decidim-admin",
+    files: {
+      # views
+      "/app/views/decidim/admin/organization_appearance/form/_colors.html.erb" => "926acd42a72c91263042502bdf50b400"
+    }
   }
 ]
 
