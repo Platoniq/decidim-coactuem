@@ -9,7 +9,6 @@
 
 .process-nav {
   background-color: $process-nav-bg;
-  box-shadow: $button-shadow transparent;
   padding-top: $border-width * 2;
 
   a {
@@ -19,8 +18,11 @@
   }
 
   &__content li {
-    &.is-active a {
-      @include process-nav-highlight;
+    &.is-active {
+      box-shadow: none;
+      a {
+        @include process-nav-highlight;
+      }
     }
   }
 
