@@ -1,0 +1,12 @@
+---
+ca:
+  activemodel:
+    attributes:
+      questionnaire_question:
+        max_characters: Límit de caràcters (deixar a zero si no hi ha límit)
+    errors:
+      models:
+        answer:
+          attributes:
+            body:
+              too_long: és massa llarg
