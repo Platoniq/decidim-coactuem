@@ -23,23 +23,6 @@ body {
   font-weight: 400;
 }
 
-@mixin font-title() {
-  text-transform: uppercase;
-}
-
-@mixin font-link() {
-  font-family: "Glacial Indifference", sans-serif;
-  font-weight: 600;
-  text-transform: none;
-}
-
-@mixin font-button() {
-  font-family: "Glacial Indifference", sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  text-decoration: none;
-}
-
 h1,
 .h1,
 h2,
@@ -54,6 +37,4 @@ h6,
 .h6 {
   @include font-heading;
   color: inherit;
-  // text-rendering: optimizeLegibility;
-  // letter-spacing: -.5px;
 }

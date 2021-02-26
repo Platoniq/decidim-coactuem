@@ -1,11 +1,12 @@
-@import "variables";
+@import "./variables";
 
 .main-footer,
-.mini-footer{
-  background-color: $body-background-color;
-  color: $body-font-color;
-
-  .decidim-logo img{
-    filter: brightness(50%);
+.mini-footer {
+  background-color: $footer-bg;
+  a {
+    color: $body-font-color;
+  }
+  a:hover {
+    color: $link-color-hover;
   }
 }
