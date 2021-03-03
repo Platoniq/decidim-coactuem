@@ -1,0 +1,15 @@
+@import "./variables";
+
+.button,
+.button.disabled,
+.button[disabled],
+.button.hollow {
+  color: $body-font-color;
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    color: $body-font-color;
+  }
+}

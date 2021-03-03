@@ -2,6 +2,7 @@
 
 @mixin process-nav-highlight {
   background-color: $process-nav-alt;
+  box-shadow: $button-shadow $process-nav-color;
   color: $process-nav-color;
   transition: all ease-in-out 250ms;
 }
