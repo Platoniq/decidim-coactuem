@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Glacial Indifference";
+  src: font-url("coactuem/glacial-indifference/GlacialIndifference-Regular.woff2") format("woff2"),
+    font-url("coactuem/glacial-indifference/GlacialIndifference-Regular.woff") format("woff"),
+    font-url("coactuem/glacial-indifference/GlacialIndifference-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Glacial Indifference";
+  src: font-url("coactuem/glacial-indifference/GlacialIndifference-Bold.woff2") format("woff2"),
+    font-url("coactuem/glacial-indifference/GlacialIndifference-Bold.woff") format("woff"),
+    font-url("coactuem/glacial-indifference/GlacialIndifference-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: "Glacial Indifference", sans-serif;
+}
+
+@mixin font-heading() {
+  font-family: "Glacial Indifference", sans-serif;
+  font-weight: 400;
+}
+
+@mixin font-title() {
+  text-transform: uppercase;
+}
+
+@mixin font-link() {
+  font-family: "Glacial Indifference", sans-serif;
+  font-weight: 600;
+  text-transform: none;
+}
+
+@mixin font-button() {
+  font-family: "Glacial Indifference", sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  text-decoration: none;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  @include font-heading;
+  color: inherit;
+  // text-rendering: optimizeLegibility;
+  // letter-spacing: -.5px;
+}

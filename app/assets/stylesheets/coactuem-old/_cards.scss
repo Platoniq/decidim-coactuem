@@ -1,0 +1,12 @@
+@import "./variables";
+
+.card {
+  box-shadow: $card-shadow;
+
+  &__footer,
+  &__top {
+    .card__button {
+      box-shadow: $card-shadow;
+    }
+  }
+}

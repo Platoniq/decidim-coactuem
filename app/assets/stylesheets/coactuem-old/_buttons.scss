@@ -1,0 +1,10 @@
+@import "variables";
+
+.button {
+  box-shadow: $button-shadow currentColor;
+}
+
+// User account page
+.card--list__icon {
+  fill: $primary;
+}

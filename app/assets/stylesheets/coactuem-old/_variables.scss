@@ -7,14 +7,16 @@ $main-deep: #1f2041;
 $main-blue: #1c7376;
 $main-alt: #00c78b;
 $main-other: #728d3b;
-$main-yellow: #ffd500;
 $red: #d65108;
+
+$complementary: #761f1c;
+$complementary-2: #1c008d;
 
 // Variables
 
-$primary: #ffd500;
+$primary: #1c7376;
 $primary-rgb: 28, 115, 118;
-$secondary: #1c7376;
+$secondary: #00c78b;
 $secondary-rgb: 0, 199, 139;
 $success: #b1ce58;
 $success-rgb: 113, 141, 0;
@@ -27,6 +29,10 @@ $highlight-rgb: 0, 199, 139;
 $highlight-alternative: #1c008d;
 $highlight-alternative-rgb: 28, 0, 141;
 
+$link-color: $primary;
+$link-color-disabled: desaturate($primary, 50%);
+$link-color-hover: $secondary;
+
 $border-color: $primary;
 $border-width: 4px;
 $border: $border-width solid $border-color;
@@ -35,20 +41,14 @@ $body-font-color: $black;
 $body-background-color: $white;
 $title-bar-color: $body-font-color;
 $title-bar-bg: $body-background-color;
-$navbar-color: $black;
-$navbar-bg: $primary;
-$process-nav-bg: $body-background-color;
-$process-nav-alt: $primary;
-$process-nav-color: $black;
-$footer-color: $black;
-$footer-bg: $primary;
-
-$link-color: $body-font-color;
-$link-color-disabled: lighten($body-font-color, 50%);
-$link-color-hover: $black;
+$navbar-color: $white;
+$navbar-bg: $success;
+$process-nav-bg: $primary;
+$process-nav-alt: $success;
+$process-nav-color: $white;
 
 $button-shadow: $border-width $border-width 0px 0px;
-$card-shadow: $border-width $border-width 0px 0px transparentize($black, 0.8);
+$card-shadow: $border-width $border-width 0px 0px transparentize($black, 0.9);
 
 $proposals: #238ff7;
 $actions: #57d685;

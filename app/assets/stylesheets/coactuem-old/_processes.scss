@@ -1,0 +1,60 @@
+@import "./variables";
+
+@mixin process-nav-highlight {
+  background-color: $process-nav-alt;
+  box-shadow: $button-shadow $process-nav-color;
+  color: $process-nav-color;
+  transition: all ease-in-out 250ms;
+}
+
+.process-nav {
+  background-color: $process-nav-bg;
+  padding-top: $border-width * 2;
+
+  a {
+    color: $process-nav-color;
+    padding: 0 0.5em;
+    border-radius: $border-width;
+  }
+
+  &__content li {
+    &.is-active {
+      box-shadow: none;
+      a {
+        @include process-nav-highlight;
+      }
+    }
+  }
+
+  &__link {
+    text-transform: none;
+    color: $process-nav-color;
+
+    &:hover {
+      text-decoration: none;
+      @include process-nav-highlight;
+    }
+
+    svg {
+      fill: $white;
+    }
+  }
+}
+
+.process-nav__more {
+  color: $white;
+  background-color: transparentize($process-nav-bg, 0.1);
+
+  i {
+    background-color: $process-nav-color;
+  }
+}
+
+.process-nav__hidden-content__more {
+  @extend .process-nav__more;
+  background-color: $process-nav-alt;
+}
+
+.process-nav__hidden-content {
+  background-color: $process-nav-bg;
+}
