@@ -1,7 +1,38 @@
 @import "./variables";
 
+@mixin bottom-caret($color) {
+  &::after {
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 0 auto;
+    background-color: $color;
+    clip-path: circle(50%);
+    transform: rotate(180deg);
+    position: relative;
+    z-index: 700;
+  }
+}
+
+@mixin nav-highlight {
+  color: $navbar-color;
+  text-decoration: underline;
+
+  @include big-screen {
+    text-decoration: none;
+    @include bottom-caret($secondary);
+  }
+}
+
 .navbar {
   background-color: $navbar-bg;
+
+  .main-nav {
+    @include big-screen {
+      height: 60px;
+    }
+  }
 }
 
 .main-nav__link a {
@@ -11,6 +42,10 @@
   font-size: 1.2rem;
 
   &:hover {
-    color: $navbar-color;
+    @include nav-highlight;
   }
+}
+
+.main-nav__link--active a {
+  @include nav-highlight;
 }
