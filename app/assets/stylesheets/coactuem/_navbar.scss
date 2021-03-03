@@ -1,51 +1,26 @@
 @import "./variables";
 
-@mixin bottom-caret($color) {
-  &::after {
-    content: "";
-    display: block;
-    width: 0.5rem;
-    height: 0.5rem;
-    margin: 0 auto;
-    background-color: $color;
-    clip-path: circle(50%);
-    transform: rotate(180deg);
-    position: relative;
-    z-index: 700;
-  }
-}
-
 @mixin nav-highlight {
   color: $navbar-color;
-  text-decoration: underline;
-
-  @include big-screen {
-    text-decoration: none;
-    @include bottom-caret($secondary);
-  }
+  background: $white;
 }
 
 .navbar {
   background-color: $navbar-bg;
-
-  .main-nav {
-    @include big-screen {
-      height: 60px;
-    }
-  }
 }
 
-.main-nav__link a {
+.main-nav__link a,
+.main-nav__link a:hover {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
   color: $navbar-color;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2rem;
-
-  &:hover {
-    @include nav-highlight;
-  }
 }
 
 .main-nav__link--active a {
+  box-shadow: none;
   @include nav-highlight;
 }
