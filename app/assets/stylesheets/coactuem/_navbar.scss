@@ -11,6 +11,7 @@
 
 .main-nav__link a,
 .main-nav__link a:hover {
+  background-color: transparent;
   margin: 0.5rem;
   padding: 0.5rem;
   border-radius: 4px;
@@ -20,7 +21,8 @@
   font-size: 1.2rem;
 }
 
-.main-nav__link--active a {
+.main-nav__link--active a,
+.main-nav__link--active a:hover {
   box-shadow: none;
   @include nav-highlight;
 }
