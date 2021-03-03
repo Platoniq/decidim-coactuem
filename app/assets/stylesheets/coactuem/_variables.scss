@@ -101,3 +101,15 @@ $color-removal: #ffeef0;
 $unit: 16px;
 
 @import "./fonts";
+
+@mixin small-screen {
+  @media print, screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin big-screen {
+  @media print, screen and (min-width: 64em) {
+    @content;
+  }
+}

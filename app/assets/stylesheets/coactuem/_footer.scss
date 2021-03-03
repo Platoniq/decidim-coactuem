@@ -19,11 +19,18 @@
 .coact-logos {
   filter: grayscale(1);
   mix-blend-mode: multiply;
+
+  width: 100%;
+  flex-shrink: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 1em 0 3em;
   gap: 2em;
+
+  @include small-screen {
+    flex-direction: column;
+  }
 
   img {
     height: 60px;
@@ -35,9 +42,18 @@
     justify-content: center;
     align-items: center;
 
+    @include small-screen {
+      flex-direction: column;
+    }
+
     img {
       border: 1px solid $black;
       margin-right: 1rem;
+
+      @include small-screen {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
     }
 
     p {
