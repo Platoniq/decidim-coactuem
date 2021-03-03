@@ -10,3 +10,8 @@ es:
           attributes:
             body:
               too_long: és massa llarg
+  coactuem:
+    footer:
+      eu: "El proyecto CoAct recibe financiamiento del programa
+          de investigación e innovación 2020 de la Unión Europea
+          con contrato No. 873048"
