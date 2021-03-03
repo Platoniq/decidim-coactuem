@@ -6,17 +6,28 @@
 
 .logo-wrapper {
   img {
+    height: 60px;
     max-height: 60px;
   }
 }
 
 .topbar__user__login a,
 .topbar__dropmenu > ul > li > a,
-.topbar__admin__link a {
+.topbar__admin__link a,
+.topbar__menu button {
   color: $body-font-color;
 
   &:hover {
     color: $link-color-hover;
+  }
+}
+
+.usermenu-off-canvas-holder {
+  .topbar__user__login a,
+  .topbar__dropmenu > ul > li > a,
+  .topbar__admin__link a,
+  .topbar__menu button {
+    color: $white;
   }
 }
 
@@ -31,4 +42,8 @@
 
 .topbar__search:not(:focus-within) button {
   background-color: $success;
+}
+
+#language-chooser-control {
+  color: $white;
 }
