@@ -2,11 +2,50 @@
 
 .main-footer,
 .mini-footer {
+  color: $body-font-color;
   background-color: $footer-bg;
   a {
     color: $body-font-color;
+    text-decoration: underline;
   }
   a:hover {
     color: $link-color-hover;
+  }
+  .decidim-logo {
+    filter: brightness(0.1);
+  }
+}
+
+.coact-logos {
+  filter: grayscale(1);
+  mix-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0 3em;
+  gap: 2em;
+
+  img {
+    height: 60px;
+    width: auto;
+  }
+
+  .eu-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      border: 1px solid $black;
+      margin-right: 1rem;
+    }
+
+    p {
+      color: $black;
+      line-height: 125%;
+      max-width: 21rem;
+      margin-bottom: 0;
+      text-align: justify;
+    }
   }
 }
