@@ -108,6 +108,12 @@ $unit: 16px;
   }
 }
 
+@mixin mid-screen {
+  @media print, screen and (min-width: 40em) and (max-width: 63em) {
+    @content;
+  }
+}
+
 @mixin big-screen {
   @media print, screen and (min-width: 64em) {
     @content;
