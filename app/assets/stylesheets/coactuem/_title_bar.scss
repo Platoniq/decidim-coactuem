@@ -45,5 +45,20 @@
 }
 
 #language-chooser-control {
-  color: $white;
+  color: $body-font-color;
+
+  @include small-screen {
+    color: $white;
+  }
+}
+
+#offCanvas {
+  .close-button {
+    color: $body-font-color;
+    margin-right: 0;
+  }
+}
+
+.topbar__user__login {
+  border: none;
 }
