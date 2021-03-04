@@ -1,18 +1,36 @@
 @import "./variables";
 
 .main-footer,
-.mini-footer {
+.coactuem-footer {
   color: $body-font-color;
   background-color: $footer-bg;
+
   a {
     color: $body-font-color;
     text-decoration: underline;
+
+    &:hover {
+      color: $link-color-hover;
+    }
   }
-  a:hover {
-    color: $link-color-hover;
+}
+
+.mini-footer {
+  padding-top: 2.5em;
+  background-color: $black;
+  color: darken($white, 50%);
+
+  a {
+    color: darken($white, 50%);
+    text-decoration: underline;
+
+    &:hover {
+      color: $white;
+    }
   }
-  .decidim-logo {
-    filter: brightness(0.1);
+
+  .decidim-logo img {
+    filter: brightness(0.5);
   }
 }
 
@@ -25,43 +43,49 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1em 0 3em;
+  margin: 1em 0 2em;
   gap: 2em;
-
-  @include small-screen {
-    flex-direction: column;
-  }
 
   img {
     height: 60px;
     width: auto;
   }
 
-  .eu-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  @include small-screen {
+    flex-direction: column;
+  }
+
+  @include mid-screen {
+    img {
+      height: 40px;
+    }
+  }
+}
+
+.eu-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include small-screen {
+    flex-direction: column;
+  }
+
+  img {
+    border: 1px solid $black;
+    margin-right: 1rem;
 
     @include small-screen {
-      flex-direction: column;
+      margin-right: 0;
+      margin-bottom: 1rem;
     }
+  }
 
-    img {
-      border: 1px solid $black;
-      margin-right: 1rem;
-
-      @include small-screen {
-        margin-right: 0;
-        margin-bottom: 1rem;
-      }
-    }
-
-    p {
-      color: $black;
-      line-height: 125%;
-      max-width: 21rem;
-      margin-bottom: 0;
-      text-align: justify;
-    }
+  p {
+    color: $black;
+    line-height: 125%;
+    max-width: 21rem;
+    margin-bottom: 0;
+    text-align: justify;
   }
 }
