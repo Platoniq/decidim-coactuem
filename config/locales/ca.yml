@@ -12,5 +12,9 @@ ca:
               too_long: és massa llarg
   coactuem:
     footer:
-      eu: El projecte CoAct rep finançament del programa de recerca i innovació 2020
-        de la Unió Europea amb contracte No. 873048
+      eu: El projecte CoAct rep finançament del programa de recerca i innovació Horizon
+        2020 de la Unió Europea amb contracte No. 873048
+      links:
+        coact: https://coactproject.eu/ca/
+        os: http://www.ub.edu/opensystems/ca/
+        smc: https://www.salutmental.org/

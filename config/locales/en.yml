@@ -2,5 +2,9 @@
 en:
   coactuem:
     footer:
-      eu: The project CoAct receives financing from the European Union's research
-        and innovation 2020 programme with contract No. 873048
+      eu: The CoAct project has received funding from the European Union´s Horizon
+        2020 research and innovation programme under grant agreement number 873048
+      links:
+        coact: https://coactproject.eu/
+        os: http://www.ub.edu/opensystems/
+        smc: https://www.salutmental.org/

@@ -1,3 +1,7 @@
-.text-highlight.heading1.hero-heading {
-  font-size: 3.5rem;
+.text-highlight {
+  text-shadow: none;
+
+  &.heading1.hero-heading {
+    font-size: 3.5rem;
+  }
 }
