@@ -1,9 +1,15 @@
 <div class="coactuem-footer">
   <div class="row">
     <div class="coact-logos">
-      <%= image_tag "coactuem/footer/os_ub_logo.png" %>
-      <%= image_tag "coactuem/footer/smc_logo.png" %>
-      <%= image_tag "coactuem/footer/coact_logo.png" %>
+      <%= link_to t("coactuem.footer.links.os"), target: :blank do %>
+        <%= image_tag "coactuem/footer/os_ub_logo.png" %>
+      <% end %>
+      <%= link_to t("coactuem.footer.links.smc"), target: :blank do %>
+        <%= image_tag "coactuem/footer/smc_logo.png" %>
+      <% end %>
+      <%= link_to t("coactuem.footer.links.coact"), target: :blank do %>
+        <%= image_tag "coactuem/footer/coact_logo.png" %>
+      <% end %>
       <div class="eu-logo">
         <%= image_tag "coactuem/footer/eu_logo.jpg" %>
         <p>

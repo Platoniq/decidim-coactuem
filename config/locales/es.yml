@@ -12,5 +12,9 @@ es:
               too_long: és massa llarg
   coactuem:
     footer:
-      eu: El proyecto CoAct recibe financiamiento del programa de investigación e
-        innovación 2020 de la Unión Europea con contrato No. 873048
+      eu: El proyecto CoAct recibe financiación del programa de investigación e innovación
+        Horizon 2020 de la Unión Europea con contrato No. 873048
+      links:
+        coact: https://coactproject.eu/es/
+        os: http://www.ub.edu/opensystems/es/
+        smc: https://www.salutmental.org/
