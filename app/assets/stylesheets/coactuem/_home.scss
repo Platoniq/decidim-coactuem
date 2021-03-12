@@ -1,7 +1,23 @@
+@import "./variables";
+
 .text-highlight {
   text-shadow: none;
 
   &.heading1.hero-heading {
     font-size: 3.5rem;
+  }
+}
+
+.home-section {
+  .button {
+    background: $green;
+    color: $white;
+    border: none;
+
+    &:hover {
+      background: $primary;
+      color: $body-font-color;
+      border: none;
+    }
   }
 }

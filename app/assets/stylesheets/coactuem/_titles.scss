@@ -18,3 +18,13 @@
     color: $heading-color;
   }
 }
+
+.card--list__icon {
+  fill: $body-font-color;
+}
+
+.card__title {
+  font-weight: bold;
+  color: $body-font-color;
+  margin-bottom: 0.5em;
+}
