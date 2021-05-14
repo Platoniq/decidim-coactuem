@@ -10,12 +10,12 @@ en:
       admin:
         tos_verification:
           help:
-          - Allows to verify all users who accept the Terms and Conditions of Use specific for this verification method.
+          - Allows to verify all users who accept the Terms and Conditions specific for this verification method.
       tos_verification:
-        explanation: Terms and Conditions verification
+        explanation: Terms and Conditions
         fields:
           acceptance: Accept
-        name: Terms and Conditions verification
+        name: Terms and Conditions
     tos_verification:
       verification:
         admin:
@@ -30,3 +30,6 @@ en:
           new:
             accept: Accept
             send: Send
+          create:
+            error: There was an error submitting the verification
+            success: You have been verified by accepting the Terms and Conditions 
