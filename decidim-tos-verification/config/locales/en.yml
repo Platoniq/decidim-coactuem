@@ -24,8 +24,8 @@ en:
               title: Terms of Service Verification text
               update: Update
             update:
-              error: There was an error updating the verification
-              success: The verification has been updated
+              error: There was an error updating the text
+              success: The text has been updated
         authorizations:
           new:
             accept: Accept
