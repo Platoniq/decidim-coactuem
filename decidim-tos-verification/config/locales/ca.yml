@@ -30,7 +30,6 @@ ca:
           new:
             accept: Acceptar
             submit: Enviar
-            submitting: Enviant
           create:
             error: Hi ha hagut un error enviant la sol·licitud
             success: Has acceptat els Termes i Condicions i se t'ha verificat 

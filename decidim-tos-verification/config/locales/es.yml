@@ -30,7 +30,6 @@ es:
           new:
             accept: Acceptar
             submit: Enviar
-            submitting: Enviando
           create:
             error: Ha habido un error enviado la solicitud
             success: Has aceptado los Términos y Condiciones y se te ha verificado
