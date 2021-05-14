@@ -5,6 +5,8 @@ module Decidim
     module Verification
       module Admin
         class TosController < Decidim::Admin::ApplicationController
+          layout "decidim/admin/users"
+
           include NeedsPermission
 
           helper_method :tos
