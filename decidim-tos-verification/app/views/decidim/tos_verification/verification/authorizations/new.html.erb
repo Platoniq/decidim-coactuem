@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <div class="row">
+    <div class="columns large-4 medium-centered">
+      <%= decidim_form_for(@form, url: authorization_path) do |form| %>
+        <div class="row h1">
+          <%= translated_attribute tos.title %>
+        </div>
+        <div class="row">
+          <%= translated_attribute tos.body %>
+        </div>
+
+        <%= form.hidden_field :handler_handle %>
+
+        <%= form.check_box :acceptance %>
+
+        <div class="actions">
+          <%= form.submit t(".send"), class: "button expanded", "data-disable-with" => "#{t('.send')}..." %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= stylesheet_link_tag "decidim/tos_verification/verification" %>

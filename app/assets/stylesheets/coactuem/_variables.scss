@@ -81,7 +81,7 @@ $color-removal: #ffeef0;
 }
 
 .callout.secondary {
-  background-color: lighten($secondary, 25%);
+  background-color: lighten($secondary, 40%);
 }
 
 .callout.success {
@@ -89,11 +89,11 @@ $color-removal: #ffeef0;
 }
 
 .callout.warning {
-  background-color: lighten($warning, 25%);
+  background-color: lighten($warning, 40%);
 }
 
 .callout.alert {
-  background-color: lighten($alert, 25%);
+  background-color: lighten($alert, 40%);
 }
 
 $unit: 16px;

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_23_131412) do
+ActiveRecord::Schema.define(version: 2021_05_14_122730) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1480,6 +1480,15 @@ ActiveRecord::Schema.define(version: 2021_02_23_131412) do
     t.index ["translation_set_id"], name: "decidim_term_customizer_translation_translation_set"
   end
 
+  create_table "decidim_tos_verification_tos", force: :cascade do |t|
+    t.bigint "decidim_organization_id"
+    t.jsonb "title"
+    t.jsonb "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_organization_id"], name: "index_decidim_tos_verifications_tos_on_organization"
+  end
+
   create_table "decidim_user_group_memberships", id: :serial, force: :cascade do |t|
     t.integer "decidim_user_id", null: false
     t.integer "decidim_user_group_id", null: false
@@ -1671,6 +1680,7 @@ ActiveRecord::Schema.define(version: 2021_02_23_131412) do
   add_foreign_key "decidim_term_customizer_constraints", "decidim_organizations"
   add_foreign_key "decidim_term_customizer_constraints", "decidim_term_customizer_translation_sets", column: "translation_set_id"
   add_foreign_key "decidim_term_customizer_translations", "decidim_term_customizer_translation_sets", column: "translation_set_id"
+  add_foreign_key "decidim_tos_verification_tos", "decidim_organizations"
   add_foreign_key "decidim_users", "decidim_organizations"
   add_foreign_key "decidim_verifications_csv_data", "decidim_organizations"
   add_foreign_key "oauth_access_grants", "decidim_users", column: "resource_owner_id"
