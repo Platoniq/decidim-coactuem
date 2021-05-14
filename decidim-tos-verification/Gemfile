@@ -3,7 +3,14 @@
 source "https://rubygems.org"
 
 ruby RUBY_VERSION
-DECIDIM_VERSION = { git: "https://github.com/Platoniq/decidim", branch: "temp/0.23-stable" }.freeze
+
+# Inside the development app, the relative require has to be one level up, as
+# the Gemfile is copied to the development_app folder (almost) as is.
+base_path = ""
+base_path = "../" if File.basename(__dir__) == "development_app"
+require_relative "#{base_path}lib/decidim/tos_verification/version"
+
+DECIDIM_VERSION = "~> 0.23.2"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-tos_verification", path: "."
@@ -26,3 +33,10 @@ group :development do
   gem "spring-watcher-listen", "~> 2.0"
   gem "web-console", "~> 3.5"
 end
+
+group :test do
+  gem "codecov", require: false
+end
+
+# Remediate CVE-2019-5420
+gem "railties", "= 5.2.4.5"

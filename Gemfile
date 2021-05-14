@@ -56,3 +56,6 @@ group :development do
   gem "capistrano-rbenv", "~> 2.2", require: false
   gem "passenger", "~> 6.0"
 end
+
+# Remediate CVE-2019-5420
+gem "railties", "= 5.2.4.5"
