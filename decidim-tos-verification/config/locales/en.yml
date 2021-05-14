@@ -30,7 +30,6 @@ en:
           new:
             accept: Accept
             submit: Submit
-            submitting: Submitting
           create:
             error: There was an error submitting the verification
             success: You have been verified by accepting the Terms and Conditions 
