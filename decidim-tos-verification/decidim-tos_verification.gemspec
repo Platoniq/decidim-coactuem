@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.summary = "A decidim verification module to verify users when they agree to domain-specific Terms of Service"
   s.description = "."
 
-  s.files = Dir["{app,config,lib}/**/*", "LICENSE-AGPLv3.txt", "Rakefile", "README.md"]
+  s.files = Dir["{app,config,db,lib}/**/*", "LICENSE-AGPLv3.txt", "Rakefile", "README.md"]
 
   s.add_dependency "decidim-core", Decidim::TosVerification.version
 
