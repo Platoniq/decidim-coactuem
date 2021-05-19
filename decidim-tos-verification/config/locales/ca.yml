@@ -2,6 +2,8 @@
 ca:
   activemodel:
     attributes:
+      authorization:
+        acceptance: Accepto
       tos:
         title: Títol
         body: Termes i condicions d'ús

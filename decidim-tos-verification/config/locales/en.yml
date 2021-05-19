@@ -2,6 +2,8 @@
 en:
   activemodel:
     attributes:
+      authorization:
+        acceptance: I accept
       tos:
         title: Title
         body: Body

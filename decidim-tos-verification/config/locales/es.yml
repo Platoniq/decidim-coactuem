@@ -2,6 +2,8 @@
 es:
   activemodel:
     attributes:
+      authorization:
+        acceptance: Acepto
       tos:
         title: Título
         body: Términos y Condiciones de uso
