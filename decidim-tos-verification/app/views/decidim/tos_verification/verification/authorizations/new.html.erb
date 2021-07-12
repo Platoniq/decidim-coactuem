@@ -1,0 +1,28 @@
+<div class="wrapper">
+  <div class="row column">
+    <div class="page-title-wrapper">
+      <h1 class="heading1 page-title">
+        <%= translated_attribute tos.title %>
+      </h1>
+    </div>
+    <div class="columns large-8 medium-centered">
+      <%= decidim_form_for(@form, url: authorization_path) do |form| %>
+        <div class="columns small-12">
+          <div class="card">
+            <div class="card__content"><%= decidim_sanitize translated_attribute(tos.body) %></div>
+          </div>
+
+          <%= form.hidden_field :handler_handle %>
+
+          <%= form.check_box :acceptance %>
+
+          <div class="actions mt-s">
+            <%= form.submit t(".submit"), class: "button expanded" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= stylesheet_link_tag "decidim/tos_verification/verification" %>

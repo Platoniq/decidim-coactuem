@@ -1,0 +1,37 @@
+---
+ca:
+  activemodel:
+    attributes:
+      authorization:
+        acceptance: Accepto
+      tos:
+        title: Títol
+        body: Termes i condicions d'ús
+  decidim:
+    authorization_handlers:
+      admin:
+        tos_verification:
+          help:
+          - Permet verificar les usuàries que acceptin els Termes i Condicions específics per a aquest verificador
+      tos_verification:
+        explanation: Termes i condicions
+        fields:
+          acceptance: Acceptar
+        name: Termes i Condicions
+    tos_verification:
+      verification:
+        admin:
+          tos:
+            edit:
+              title: Text per als Termes i Condicions
+              update: Actualitzar
+            update:
+              error: No s'ha pogut actualitzar el text
+              success: S'ha actualitzat el text
+        authorizations:
+          new:
+            accept: Acceptar
+            submit: Enviar
+          create:
+            error: Hi ha hagut un error enviant la sol·licitud
+            success: Has acceptat els Termes i Condicions i se t'ha verificat 

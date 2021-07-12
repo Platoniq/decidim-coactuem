@@ -47,3 +47,6 @@ public/uploads
 # Ignore .rbenv-vars
 .rbenv-vars
 spec/decidim_dummy_app
+
+# Ignore coverage folder
+/coverage

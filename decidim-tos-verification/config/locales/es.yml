@@ -1,0 +1,37 @@
+---
+es:
+  activemodel:
+    attributes:
+      authorization:
+        acceptance: Acepto
+      tos:
+        title: Título
+        body: Términos y Condiciones de uso
+  decidim:
+    authorization_handlers:
+      admin:
+        tos_verification:
+          help:
+          - Permite verificar a las usuarias que acepten los Términos y Condiciones específicos para este verificador
+      tos_verification:
+        explanation: Términos y Condiciones
+        fields:
+          acceptance: Acceptar
+        name: Términos y Condiciones
+    tos_verification:
+      verification:
+        admin:
+          tos:
+            edit:
+              title: Texto para los Términos y Condiciones
+              update: Actualizar
+            update:
+              error: No se ha podido actualizar el texto
+              success: Se ha actualizado el texto
+        authorizations:
+          new:
+            accept: Acceptar
+            submit: Enviar
+          create:
+            error: Ha habido un error enviado la solicitud
+            success: Has aceptado los Términos y Condiciones y se te ha verificado
