@@ -1,0 +1,119 @@
+$white: white;
+$gray-light: #f0f0f0;
+$gray-dark: #9a9a9a;
+$black: #3f3f3f;
+
+$green: #a2c638;
+
+// Variables
+
+$primary: #ffd500;
+$primary-rgb: 28, 115, 118;
+$secondary: #728d3b;
+$secondary-rgb: 114, 141, 59;
+$success: #a2c638;
+$success-rgb: 162, 198, 56;
+$warning: #efa00b;
+$warning-rgb: 239, 160, 11;
+$alert: #d65108;
+$alert-rgb: 214, 81, 8;
+$highlight: #00c78b;
+$highlight-rgb: 0, 199, 139;
+$highlight-alternative: #1c008d;
+$highlight-alternative-rgb: 28, 0, 141;
+
+$border-color: $primary;
+$border-width: 4px;
+$border: $border-width solid $border-color;
+
+$body-font-color: $black;
+$body-background-color: $white;
+$title-bar-color: $body-font-color;
+$title-bar-bg: $body-background-color;
+$navbar-color: $black;
+$navbar-bg: $primary;
+$process-nav-bg: $body-background-color;
+$process-nav-alt: $primary;
+$process-nav-color: $black;
+$footer-color: $black;
+$footer-bg: $primary;
+
+$heading-color: $green;
+
+$link-color: $body-font-color;
+$link-color-disabled: lighten($body-font-color, 50%);
+$link-color-hover: $black;
+
+$button-shadow: $border-width $border-width 0px 0px;
+$card-shadow: $border-width $border-width 0px 0px transparentize($black, 0.8);
+
+$proposals: #238ff7;
+$actions: #57d685;
+$debates: #fa6c96;
+$meetings: #fabc6c;
+
+$twitter: #55acee;
+$facebook: #3b5998;
+$google: #4285f4;
+
+// background colors used in public diff views
+$color-addition: #e6ffed;
+$color-removal: #ffeef0;
+
+:root {
+  --primary: #{$primary};
+  --primary-rgb: #{$primary-rgb};
+  --secondary: #{$secondary};
+  --secondary-rgb: #{$secondary-rgb};
+  --success: #{$success};
+  --success-rgb: #{$success-rgb};
+  --warning: #{$warning};
+  --warning-rgb: #{$warning-rgb};
+  --alert: #{$alert};
+  --alert-rgb: #{$alert-rgb};
+  --twitter: #{$twitter};
+  --facebook: #{$facebook};
+  --google: #{$google};
+}
+
+.callout.primary {
+  background-color: lighten($primary, 25%);
+}
+
+.callout.secondary {
+  background-color: lighten($secondary, 40%);
+}
+
+.callout.success {
+  background-color: lighten($success, 25%);
+}
+
+.callout.warning {
+  background-color: lighten($warning, 40%);
+}
+
+.callout.alert {
+  background-color: lighten($alert, 40%);
+}
+
+$unit: 16px;
+
+@import "./fonts";
+
+@mixin small-screen {
+  @media print, screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin mid-screen {
+  @media print, screen and (min-width: 40em) and (max-width: 63em) {
+    @content;
+  }
+}
+
+@mixin big-screen {
+  @media print, screen and (min-width: 64em) {
+    @content;
+  }
+}

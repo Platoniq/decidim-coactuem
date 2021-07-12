@@ -1,0 +1,28 @@
+@import "./variables";
+
+@mixin nav-highlight {
+  color: $navbar-color;
+  background: $white;
+}
+
+.navbar {
+  background-color: $navbar-bg;
+}
+
+.main-nav__link a,
+.main-nav__link a:hover {
+  background-color: transparent;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: $navbar-color;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.main-nav__link--active a,
+.main-nav__link--active a:hover {
+  box-shadow: none;
+  @include nav-highlight;
+}

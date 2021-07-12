@@ -13,6 +13,7 @@ gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-term_customizer", git: "https://github.com/Platoniq/decidim-module-term_customizer", branch: "temp/0.23"
 # gem "decidim-consultations", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
+gem "decidim-tos_verification", path: "."
 
 gem "bootsnap", "~> 1.4"
 
@@ -55,3 +56,6 @@ group :development do
   gem "capistrano-rbenv", "~> 2.2", require: false
   gem "passenger", "~> 6.0"
 end
+
+# Remediate CVE-2019-5420
+gem "railties", "= 5.2.4.5"

@@ -1,0 +1,68 @@
+@import "./variables";
+
+.title-bar {
+  background-color: $title-bar-bg;
+}
+
+.logo-wrapper {
+  img {
+    height: 80px;
+    max-height: 80px;
+
+    @include mid-screen {
+      max-width: 150px;
+    }
+  }
+}
+
+.topbar__user__login a,
+.topbar__dropmenu > ul > li > a,
+.topbar__admin__link a,
+.topbar__menu button {
+  color: $body-font-color;
+
+  &:hover {
+    color: $link-color-hover;
+  }
+}
+
+.usermenu-off-canvas-holder {
+  .topbar__user__login a,
+  .topbar__dropmenu > ul > li > a,
+  .topbar__admin__link a,
+  .topbar__menu button {
+    color: $white;
+  }
+}
+
+.topbar__dropmenu > ul > li > a::after {
+  border-top-color: $body-font-color !important;
+}
+
+.topbar__search input {
+  background-color: $gray-light;
+  color: $body-font-color;
+}
+
+.topbar__search:not(:focus-within) button {
+  background-color: $green;
+}
+
+#language-chooser-control {
+  color: $body-font-color;
+
+  @include small-screen {
+    color: $white;
+  }
+}
+
+#offCanvas {
+  .close-button {
+    color: $body-font-color;
+    margin-right: 0;
+  }
+}
+
+.topbar__user__login {
+  border: none;
+}

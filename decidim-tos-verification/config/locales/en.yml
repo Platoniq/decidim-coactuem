@@ -1,0 +1,37 @@
+---
+en:
+  activemodel:
+    attributes:
+      authorization:
+        acceptance: I accept
+      tos:
+        title: Title
+        body: Body
+  decidim:
+    authorization_handlers:
+      admin:
+        tos_verification:
+          help:
+          - Allows to verify all users who accept the Terms and Conditions specific for this verification method.
+      tos_verification:
+        explanation: Terms and Conditions
+        fields:
+          acceptance: Accept
+        name: Terms and Conditions
+    tos_verification:
+      verification:
+        admin:
+          tos:
+            edit:
+              title: Terms of Service Verification text
+              update: Update
+            update:
+              error: There was an error updating the text
+              success: The text has been updated
+        authorizations:
+          new:
+            accept: Accept
+            submit: Submit
+          create:
+            error: There was an error submitting the verification
+            success: You have been verified by accepting the Terms and Conditions 

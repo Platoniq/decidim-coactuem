@@ -1,0 +1,30 @@
+@import "./variables";
+
+.section-heading {
+  color: $heading-color;
+
+  &::before {
+    background-color: $heading-color;
+  }
+}
+
+.heading1,
+.heading2,
+.heading3,
+.heading4,
+.heading5,
+.heading6 {
+  &.page-title {
+    color: $heading-color;
+  }
+}
+
+.card--list__icon {
+  fill: $body-font-color;
+}
+
+.card__title {
+  font-weight: bold;
+  color: $body-font-color;
+  margin-bottom: 0.5em;
+}
