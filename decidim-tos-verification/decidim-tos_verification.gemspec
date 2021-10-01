@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email = ["vera@platoniq.net"]
   s.license = "AGPL-3.0"
   s.homepage = "https://github.com/decidim/decidim-module-tos_verification"
-  s.required_ruby_version = ">= 2.6"
+  s.required_ruby_version = ">= 2.7"
 
   s.name = "decidim-tos_verification"
   s.summary = "A decidim verification module to verify users when they agree to domain-specific Terms of Service"
