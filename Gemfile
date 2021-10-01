@@ -4,13 +4,13 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/Platoniq/decidim", branch: "temp/0.23-stable" }.freeze
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.24-stable" }.freeze
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
-gem "decidim-decidim_awesome", "0.6.2"
+gem "decidim-decidim_awesome", "0.7.0"
 gem "decidim-templates", DECIDIM_VERSION
-gem "decidim-term_customizer", git: "https://github.com/Platoniq/decidim-module-term_customizer", branch: "temp/0.23"
+gem "decidim-term_customizer", git: "https://github.com/Platoniq/decidim-module-term_customizer", branch: "temp/0.24"
 # gem "decidim-consultations", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-tos_verification", path: "."
@@ -20,7 +20,7 @@ gem "bootsnap", "~> 1.4"
 gem "puma", ">= 4.3.5"
 gem "uglifier", "~> 4.1"
 
-gem "faker", "~> 1.9"
+gem "faker", "~> 2.14"
 
 gem "rspec"
 gem "sentry-rails"
@@ -36,6 +36,8 @@ end
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
+
+  gem "rubocop-faker", "~> 1.0"
 
   gem "decidim-dev", DECIDIM_VERSION
 end
@@ -56,6 +58,3 @@ group :development do
   gem "capistrano-rbenv", "~> 2.2", require: false
   gem "passenger", "~> 6.0"
 end
-
-# Remediate CVE-2019-5420
-gem "railties", "= 5.2.4.5"

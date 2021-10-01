@@ -4,7 +4,7 @@ module Decidim
   # This holds the decidim-tos_verification version.
   module TosVerification
     def self.version
-      "0.23.2"
+      "0.24.3"
     end
   end
 end
