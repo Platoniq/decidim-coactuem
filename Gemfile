@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = "0.24.3"
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.24-stable" }.freeze
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
@@ -58,6 +58,3 @@ group :development do
   gem "capistrano-rbenv", "~> 2.2", require: false
   gem "passenger", "~> 6.0"
 end
-
-# Remediate CVE-2019-5420
-gem "railties", "= 5.2.6"
