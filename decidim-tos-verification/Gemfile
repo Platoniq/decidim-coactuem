@@ -10,7 +10,7 @@ base_path = ""
 base_path = "../" if File.basename(__dir__) == "development_app"
 require_relative "#{base_path}lib/decidim/tos_verification/version"
 
-DECIDIM_VERSION = "~> 0.23.2"
+DECIDIM_VERSION = "0.24.3"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-tos_verification", path: "."
@@ -37,6 +37,3 @@ end
 group :test do
   gem "codecov", require: false
 end
-
-# Remediate CVE-2019-5420
-gem "railties", "= 5.2.4.5"

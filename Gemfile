@@ -4,13 +4,13 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/Platoniq/decidim", branch: "temp/0.23-stable" }.freeze
+DECIDIM_VERSION = "0.24.3"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
-gem "decidim-decidim_awesome", "0.6.2"
+gem "decidim-decidim_awesome", "0.7.0"
 gem "decidim-templates", DECIDIM_VERSION
-gem "decidim-term_customizer", git: "https://github.com/Platoniq/decidim-module-term_customizer", branch: "temp/0.23"
+gem "decidim-term_customizer", git: "https://github.com/Platoniq/decidim-module-term_customizer", branch: "temp/0.24"
 # gem "decidim-consultations", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-tos_verification", path: "."
@@ -58,4 +58,4 @@ group :development do
 end
 
 # Remediate CVE-2019-5420
-gem "railties", "= 5.2.4.5"
+gem "railties", "= 5.2.6"
