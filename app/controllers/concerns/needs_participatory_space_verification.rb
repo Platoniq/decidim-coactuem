@@ -18,14 +18,14 @@ module NeedsParticipatorySpaceVerification
       _name, spaces = restricted.find { |element| element[0] == current_participatory_space.manifest.name }
       return unless spaces
 
-      space, methods = spaces.find { |item| item[0].to_s == current_participatory_space.slug }
+      space, methods = spaces.find { |item| item[0].to_s == current_participatory_space.slug.to_s }
       return unless space && methods
 
       redirect_to_first_authorization(methods)
     end
 
     def redirect_to_first_authorization(methods)
-      return if Decidim::Verifications::Authorizations.new(organization: current_organization, user: current_user, name: methods).any?
+      return if current_user && Decidim::Verifications::Authorizations.new(organization: current_organization, user: current_user, name: methods).any?
 
       path = Decidim::Verifications::Adapter.from_element(methods.first).root_path(redirect_url: Decidim::ResourceLocatorPresenter.new(current_participatory_space)&.path)
       redirect_to(path) || "/"
