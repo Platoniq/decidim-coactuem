@@ -12,7 +12,6 @@ module Decidim
 
         def new
           enforce_permission_to :create, :authorization, authorization: authorization
-
           @form = AuthorizationForm.new(handler_handle: "tos_verification").with_context(current_organization: current_organization)
         end
 
@@ -26,7 +25,7 @@ module Decidim
           Decidim::Verifications::ConfirmUserAuthorization.call(authorization, @form, session) do
             on(:ok) do
               flash[:notice] = t("authorizations.create.success", scope: "decidim.tos_verification.verification")
-              redirect_to decidim_verifications.authorizations_path
+              redirect_to redirect_url || decidim_verifications.authorizations_path
             end
 
             on(:invalid) do
@@ -46,7 +45,7 @@ module Decidim
         end
 
         def tos
-          Decidim::TosVerification::Tos.find_by(organization: current_organization)
+          Decidim::TosVerification::Tos.find_or_create_by(organization: current_organization)
         end
       end
     end

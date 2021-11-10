@@ -6,7 +6,7 @@
       </h1>
     </div>
     <div class="columns large-8 medium-centered">
-      <%= decidim_form_for(@form, url: authorization_path) do |form| %>
+      <%= decidim_form_for(@form, url: authorization_path(redirect_url: redirect_url)) do |form| %>
         <div class="columns small-12">
           <div class="card">
             <div class="card__content"><%= decidim_sanitize translated_attribute(tos.body) %></div>

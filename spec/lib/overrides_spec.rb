@@ -11,7 +11,9 @@ checksums = [
     files: {
       # layouts
       "/app/views/layouts/decidim/_head_extra.html.erb" => "1b8237357754cf519f4e418135f78440",
-      "/app/views/layouts/decidim/_organization_colors.html.erb" => "34f0d188a62108e7a57a1c270daed8bb"
+      "/app/views/layouts/decidim/_organization_colors.html.erb" => "34f0d188a62108e7a57a1c270daed8bb",
+      # permissions
+      "/app/controllers/concerns/decidim/participatory_space_context.rb" => "4066e1806157f7d5d79aca636f0ade3a"
     }
   },
   {

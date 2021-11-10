@@ -8,7 +8,7 @@ DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
-gem "decidim-decidim_awesome", "0.7.0"
+gem "decidim-decidim_awesome", "~> 0.7.2"
 gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-term_customizer", git: "https://github.com/Platoniq/decidim-module-term_customizer", branch: "temp/0.24"
 # gem "decidim-consultations", DECIDIM_VERSION
